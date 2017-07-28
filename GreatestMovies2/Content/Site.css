@@ -1,0 +1,102 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('../images/background.jpg');
+    background-size:cover;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+span#Title{
+    font-weight:900;
+  
+    color:#000000;
+    font-size:25px;
+}
+span#info{
+    color:#000000;
+    font-size:15px;
+    font-weight:900;
+}
+#ActName{
+        font-size:45px;
+        color:#000000;
+        text-align:center;
+        font-weight:900;
+}
+
+div#text.col-md-4 {
+    border: 2px;
+    outline-color: #000000;
+    outline-style: solid;
+    background-image: url('../images/SAGA.jpg');
+    background-size: cover;
+    opacity: 06;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 480px;
+    margin-top:125px;
+   
+    
+}
+h6{
+    padding-top:100px;
+}
+img{
+    margin:auto;
+}
+div#createRow.row.container-fluid{
+    width:500px;
+    margin:auto;
+    margin-left:0px;
+    margin-right:0px
+   
+}
+
+div#createColum.col-md-12.col-md-6{
+    margin-left: 310px;
+    width: 530px;
+   
+}
+
+div.carosel.row.container-fluid{
+    width:500px;
+    margin:auto;
+}
+p#welcomeText{
+    text-align:center;
+    color:#FFFFFF;
+}
+h2#welcomeTitle{
+    text-align:center;
+    color:#FFFFFF;
+}
+a.btn.btn-default{
+  
+    margin-left: 150px;
+    margin-top: 35px;
+}
+div#actorInfo.col-md-12.col-md-6{
+    margin-left:350px;
+}
+h2{
+    text-align:center;
+
+}

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<GreatestMovies2.Models.Actors>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="row container-fluid" id="createRow">
+    <div class="col-md-12 col-md-6" id="createColum">
+       
+            <h2 id="actorText">Welcome to the section where you get to enter your favorite actor</h2>   
+            <p><a class="btn btn-default" @Html.ActionLink("Create New", "Create")</a></p>
+        
+    </div>
+   
+</div>
+
+<div id="Actor" class="row container-fluid">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4" id="text">
+            <h4 id="ActName">
+                @Html.DisplayFor(modelItem => item.ActorName)
+            </h4>
+            <h6>
+                <span id="Title"> Date of Birth:</span> <span id="info">@Html.DisplayFor(modelItem => item.DOB)</span>
+                <br />
+                <span id="Title"> Nationality:</span>  <span id="info">@Html.DisplayFor(modelItem => item.Nationality)</span>
+                <br />
+                <span id="Title"> Gender:</span> <span id="info"> @Html.DisplayFor(modelItem => item.Gender)</span>
+
+            </h6>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ActorsID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ActorsID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ActorsID })
+            </p>
+        </div>
+    }
+</div>
+

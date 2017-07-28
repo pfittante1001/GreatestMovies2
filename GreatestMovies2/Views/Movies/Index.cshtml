@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GreatestMovies2.Models.Movies>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RelDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoxOfficeGross)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GenreID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoxOfficeGross)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GenreID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
+        </td>
+    </tr>
+}
+
+</table>
